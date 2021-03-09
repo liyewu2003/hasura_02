@@ -2,7 +2,7 @@ name: GitHub Actions deploy hasura migrate apply
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
