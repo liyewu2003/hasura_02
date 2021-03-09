@@ -1,0 +1,17 @@
+---
+schema:
+  - https://striver-test.hasura.app/v1/graphql:
+      headers:
+        X-Hasura-Admin-Secret: ${HASURA_ADMIN_SECRET}
+overwrite: true
+documents: "./graphql/**/*.graphql"
+generates:
+  "./generated/graphql.ts":
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-graphql-request
+      - plugin-typescript-swr
+config:
+  rawRequest: false
+  autogenSWRKey: true
