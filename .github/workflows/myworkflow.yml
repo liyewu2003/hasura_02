@@ -29,10 +29,8 @@ jobs:
         uses: actions/checkout@master
       - name: install hasura cli
         run: curl -L https://github.com/hasura/graphql-engine/raw/master/cli/get.sh | bash
-      - name: Apply hasura migrations
-        uses: tibotiber/hasura-action@master
-        with:
-          args: migrate apply
+      - name: restore data
+      	run:  hasura migrate apply
         env:
           HASURA_ENDPOINT: ${{ secrets.HASURA_ENDPOINT }}
           HASURA_ADMIN_SECRET: ${{ secrets.HASURA_ADMIN_SECRET }}
