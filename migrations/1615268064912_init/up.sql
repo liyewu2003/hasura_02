@@ -1,3 +1,6 @@
+drop schema public CASCADE;
+create schema public;
+
 CREATE TYPE public.candidate_status_enums AS ENUM (
     'graduated',
     'studying',
