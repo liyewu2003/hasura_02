@@ -4,7 +4,7 @@ on:
     branches:
       - main
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     
     services:
@@ -31,7 +31,4 @@ jobs:
         run: curl -L https://github.com/hasura/graphql-engine/raw/master/cli/get.sh | bash
       - name: restore data
       	run:  hasura migrate apply
-        env:
-          HASURA_ENDPOINT: ${{ secrets.HASURA_ENDPOINT }}
-          HASURA_ADMIN_SECRET: ${{ secrets.HASURA_ADMIN_SECRET }}
-          HASURA_WORKDIR: hasura
+ 
