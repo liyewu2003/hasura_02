@@ -34,7 +34,7 @@ jobs:
       - name: show current path
         run:  echo `pwd`
       - name: show current files
-      	run:  echo `ls -l`
+        run:  echo `ls -l`
       - name: restore data
         run:  hasura migrate apply --endpoint http://localhost:8080
  
