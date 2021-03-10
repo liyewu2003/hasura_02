@@ -32,6 +32,6 @@ jobs:
       - name: create config.yaml
         run: touch config.yaml | cd hasura
       - name: restore data
-        run:  hasura migrate apply --endpoint localhost:8080
+        run:  hasura migrate apply --endpoint http://localhost:8080
  
  
