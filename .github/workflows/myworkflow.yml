@@ -31,8 +31,6 @@ jobs:
         run: curl -L https://github.com/hasura/graphql-engine/raw/master/cli/get.sh | bash
       - name: create config.yaml
         run: touch config.yaml 
-      - name: enter working directory
-        run:  cd hasura
       - name: show current path
         run:  echo `pwd`
       - name: restore data
